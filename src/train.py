@@ -13,6 +13,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
     accuracy_score,
     classification_report,
+    confusion_matrix,
     roc_auc_score,
 )
 from sklearn.model_selection import StratifiedKFold, cross_val_predict, train_test_split
@@ -153,11 +154,16 @@ def _evaluate_cv(pipeline: Pipeline, X: pd.DataFrame, y: pd.Series) -> Dict[str,
 
     proba = cross_val_predict(pipeline, X, y, cv=cv, method="predict_proba")
     preds = (proba[:, 1] >= 0.5).astype(int)
+    cm = confusion_matrix(y, preds, labels=[0, 1])
 
     metrics: Dict[str, Any] = {
         "cv": {"n_splits": 5, "type": "StratifiedKFold", "random_state": 42},
         "accuracy": float(accuracy_score(y, preds)),
         "roc_auc": float(roc_auc_score(y, proba[:, 1])),
+        "confusion_matrix": {
+            "labels": [0, 1],
+            "matrix": cm.tolist(),  # [[tn, fp], [fn, tp]]
+        },
         "classification_report": classification_report(y, preds, output_dict=True),
         "threshold": 0.5,
         "n_rows": int(X.shape[0]),

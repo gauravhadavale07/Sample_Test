@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Artifacts / outputs
+artifacts/
+data/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
