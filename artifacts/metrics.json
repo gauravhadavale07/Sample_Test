@@ -1,0 +1,45 @@
+{
+  "cv": {
+    "n_splits": 5,
+    "type": "StratifiedKFold",
+    "random_state": 42
+  },
+  "accuracy": 0.8250825082508251,
+  "roc_auc": 0.9080540445692226,
+  "classification_report": {
+    "0": {
+      "precision": 0.8323353293413174,
+      "recall": 0.8475609756097561,
+      "f1-score": 0.8398791540785498,
+      "support": 164.0
+    },
+    "1": {
+      "precision": 0.8161764705882353,
+      "recall": 0.7985611510791367,
+      "f1-score": 0.8072727272727273,
+      "support": 139.0
+    },
+    "accuracy": 0.8250825082508251,
+    "macro avg": {
+      "precision": 0.8242558999647763,
+      "recall": 0.8230610633444464,
+      "f1-score": 0.8235759406756386,
+      "support": 303.0
+    },
+    "weighted avg": {
+      "precision": 0.8249225195502995,
+      "recall": 0.8250825082508251,
+      "f1-score": 0.8249210902963408,
+      "support": 303.0
+    }
+  },
+  "threshold": 0.5,
+  "n_rows": 303,
+  "n_features_raw": 13,
+  "positive_rate": 0.45874587458745875,
+  "data_source": {
+    "type": "ucimlrepo",
+    "id": 45
+  },
+  "model_type": "logreg"
+}

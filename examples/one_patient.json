@@ -1,0 +1,16 @@
+{
+  "age": 55,
+  "sex": 1,
+  "chest_pain_type": 2,
+  "resting_bp": 140,
+  "cholesterol": 240,
+  "fasting_blood_sugar": 0,
+  "resting_ecg": 1,
+  "max_heart_rate": 150,
+  "exercise_induced_angina": 0,
+  "st_depression": 1.0,
+  "st_slope": 1,
+  "num_major_vessels": 0,
+  "thalassemia": 2
+}
+

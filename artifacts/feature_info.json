@@ -1,0 +1,19 @@
+{
+  "raw_columns": [
+    "age",
+    "sex",
+    "chest_pain_type",
+    "resting_bp",
+    "cholesterol",
+    "fasting_blood_sugar",
+    "resting_ecg",
+    "max_heart_rate",
+    "exercise_induced_angina",
+    "st_depression",
+    "st_slope",
+    "num_major_vessels",
+    "thalassemia"
+  ],
+  "target_name": "target",
+  "target_mapping": "binary: 0=no disease, 1=disease"
+}
